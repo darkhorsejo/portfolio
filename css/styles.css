@@ -1399,6 +1399,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+
 @media (min-width: 1200px) {
   .col-xl {
     flex: 1 0 0%;
@@ -11589,6 +11590,7 @@ html {
 }
 .profile .profile-img {
   height: 80vw;
+  width: 30vw;
   max-height: 45rem;
   position: absolute;
   bottom: 0;
