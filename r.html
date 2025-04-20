@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paystack Payment</title>
+</head>
+<body>
+    <button type="button" onclick="initiatePayment()">Pay Now!!!</button>
+    
+    <!-- Load Paystack script first -->
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <!-- Other scripts can go after -->
+    <script src="js/scripts.js"></script>
+
+    <script>
+        function initiatePayment() {
+            const paystack = new PaystackPop();
+            paystack.checkout({
+                key: 'pk_test_e95e0edd834aae7c1ac6f67bee2f136cbf2dce32', // Replace with your actual public key
+                email: 'sample@email.com', // Replace with customer email
+                amount: 23400, // Amount in kobo (23400 = ₦234)
+                onSuccess: (transaction) => {
+                    console.log("Payment successful:", transaction);
+                    // You can redirect or show success message here
+                },
+                onClose: () => {
+                    console.log("Payment window closed");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
