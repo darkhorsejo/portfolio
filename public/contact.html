@@ -150,6 +150,31 @@
         // Get the current year
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBYUzJSchEDxzzFRcH5XBedMoZ0l28F0OA",
+      authDomain: "proposals-6be47.firebaseapp.com",
+      projectId: "proposals-6be47",
+      storageBucket: "proposals-6be47.firebasestorage.app",
+      messagingSenderId: "340060797178",
+      appId: "1:340060797178:web:e71ebafe8024afe061b143",
+      measurementId: "G-3W5C07X0EH"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  
 </body>
 
 </html>
